@@ -1,0 +1,15 @@
+<div class="row">
+    <form class="col s12" method="post" action="">
+        {% csrf_token %}
+        <div class="row">
+            <div class="input-field col s6">
+                <label for="icon_prefix">Name</label>
+                {{form.name}}
+            </div>
+        </div><br>
+        <input type="hidden" name="fake_input" value="0">
+        <button type="submit" class="waves-effect waves-light btn">
+            submit
+        </button
+    </form>
+</div>

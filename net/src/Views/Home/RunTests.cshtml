@@ -1,0 +1,29 @@
+﻿@{
+    Layout = null;
+    ViewBag.Title = "RunTests";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <h2>Run Tests</h2>
+
+        @{
+            <ul>
+                @foreach (var result in ViewBag.Results)
+                {
+                    <li>@result.Attack</li>
+                }
+            </ul>
+        }
+
+    </div>
+</body>
+</html>
+

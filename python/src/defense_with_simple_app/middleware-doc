@@ -1,0 +1,47 @@
+- checkig methods in django middleware give us more flexibility for dealing with all requests or responses.
+- making class handling_middleware in middleware and declaring methods to defend some attacks.
+
+notes: 
+1- process_request() method declared in middleware is called on each request before excuting any view
+2- process_response() method declared in middleware is called on each response before render to client
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+- checkHttpMethod() >> takes 2 parameters 'request and methd name' to check http method if not included in accepted http method saved to DB
+
+- checkURI() >> takes only 1 parameter 'request',
+split url into list and check if any item in denied url strings saved to DB
+
+- checkHTTPVersion() >> takes only 1 parameter 'request',
+check http version if not HTTP/1.1
+
+- checkUserAgent() >> takes only 1 parameter 'request',
+check user-agent if includes in denied user agents saved to DB or,
+if the session value of user_agent created to user exists and not equal to HTTP_USER_AGENT
+
+- checkHostname() >> takes 2 parameter 'request and hostname',
+check if SERVER_NAME not exists or,
+SERVER_NAME value not equal to hostname passed to checkHostname method
+
+- nonExistingFile() >> takes 1 parameter 'request',
+get PATH string and split it to get files  ending with .'extension',
+to check this extension if exists in denied extensions saved to DB
+
+- checkConcurrentSession() >> takes 1 parameter 'request',
+compare REMOTE_ADDR value added to session if exists, 
+with user REMOTE_ADDR
+
+- checkFakeCookie() >> takes 4 parameters 'request, response, cookie_name, and cookie_value'
+check if cookie_name added to COOKIES with specific value exists or not,
+if exists: check if this value changed
+
+- checkFakeInput() >> takes 3 parameters 'request, input_name and input_value'
+check if hidden input added to particular form exists or not,
+to compare value passed to checkFakeInput method withvalue of hidden input
+
+- checkSpeed() >> takes only 1 parameter 'request'
+check 'amount_requests_last_minute' , 'amount_requests_last_minute_count' values added to session,
+if there is many requests per seconds
+
+- getSessionParameters() >> takes only 1 parameter 'request'
+get session 'IP, user, Cookie'
