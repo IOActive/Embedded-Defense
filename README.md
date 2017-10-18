@@ -4,7 +4,7 @@ Sample embedded defense code to be used in applications written in .NET, Java, P
 
 ## Getting Started
 
-A comprehensive list of embedded defense possibilities has been released on the release of the specification ["Embedding Defense in Server-Side Applications"](https://tbd). Based on this specification, examples of defense implementations were built for .NET, Java, PHP and Python applications. Please, keep in mind that this code should be use at your own risk. 
+A comprehensive list of embedded defense possibilities has been released on the release of the specification [Embedding Defense in Server-Side Applications](https://github.com/IOActive/Embedded-Defense/blob/master/Embedding_Defense_in_Server-Side_Applications-wp.pdf). Based on this specification, examples of defense implementations were built for .NET, Java, PHP and Python applications. Please, keep in mind that this code should be use at your own risk. 
 
 ### Deployment
 
