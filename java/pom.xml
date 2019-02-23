@@ -23,7 +23,7 @@
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-server</artifactId>
-			<version>${jettyVersion}</version>
+			<version>[9.3.24.v20180605,)</version>
 		</dependency>
 		<dependency>
 			<groupId>org.xerial</groupId>
